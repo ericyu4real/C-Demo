@@ -34,7 +34,7 @@ public:
                 return product.stock;
             }
         }
-        return -1; // Indicates product not found
+        return -1;
     }
 
     bool purchase(const std::string& productName, int quantity) {
@@ -42,10 +42,10 @@ public:
             if (product.name == productName && product.stock >= quantity) {
                 product.stock -= quantity;
                 std::cout << "Purchased " << quantity << " of " << productName << std::endl;
-                return true; // Purchase successful
+                return true; 
             }
         }
-        return false; // Purchase failed (product not found or insufficient stock)
+        return false;
     }
 
 private:
@@ -67,7 +67,7 @@ int main() {
         std::cout << "Purchase failed." << std::endl;
     }
 
-    shop.displayProducts(); // Display updated stock levels
+    shop.displayProducts();
 
     return 0;
 }
